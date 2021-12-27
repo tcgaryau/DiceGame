@@ -16,7 +16,17 @@ if (randomNumber1 > randomNumber2) {
   h1Dice.innerHTML = `Player 2 Wins! <i class="redFlag fas fa-flag"></i>`;
 }
 
-clickMe.addEventListener("click", e => {
+clickMe.addEventListener("click", (e) => {
   e.preventDefault();
-  location.reload();
-})
+  if (randomNumber1 > randomNumber2) {
+    h1Dice.innerHTML = `<i class="redFlag fas fa-flag"></i> Player 1 Wins!`;
+  } else if (randomNumber1 === randomNumber2) {
+    h1Dice.innerHTML = "Draw!";
+  } else {
+    h1Dice.innerHTML = `Player 2 Wins! <i class="redFlag fas fa-flag"></i>`;
+  }
+  randomNumber1 = Math.floor(Math.random() * 6) + 1;
+  randomNumber2 = Math.floor(Math.random() * 6) + 1;
+  dice1.setAttribute("src", `./images/dice${randomNumber1}.png`);
+  dice2.setAttribute("src", `./images/dice${randomNumber2}.png`);
+});
