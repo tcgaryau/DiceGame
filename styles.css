@@ -12,6 +12,17 @@
 .redFlag {
   color: red;
 }
+
+a {
+  text-decoration: none;
+  color: #4ECCA3;
+}
+
+a:hover {
+  color: #1f5342;
+
+}
+
 body {
   background-color: #393E46;
   text-align: center;
@@ -40,5 +51,4 @@ footer {
   color: #EEEEEE;
   text-align: center;
   font-family: 'Indie Flower', cursive;
-
 }
